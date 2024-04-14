@@ -7,10 +7,11 @@ import listingRouter from './routes/listing.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 import connectDB from './config/db.js';
+
 dotenv.config();
-connectDB();
+
 mongoose
-  .connect("mongodb+srv://uday:1234@mern-estate.iyaovek.mongodb.net/?retryWrites=true&w=majority&appName=mern-estate")
+  .connect('mongodb+srv://uday:1234@mern-estate.iyaovek.mongodb.net/?retryWrites=true&w=majority&appName=mern-estate')
   .then(() => {
     console.log('Connected to MongoDB!');
   })
